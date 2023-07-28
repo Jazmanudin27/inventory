@@ -72,6 +72,6 @@ class AuthController extends Controller
     {
         Session::flush();
         Auth::logout();
-        return Redirect('/');
+        return redirect("login")->withSuccess('Kamu Tiak Mempunyai Hak Akses');
     }
 }

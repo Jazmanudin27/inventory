@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 @php
 
     $id = Auth::user()->id;
@@ -42,7 +42,6 @@
     <link rel="manifest" href="{{ asset('mobile/manifest.json') }}">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <style>
         .float {
             position: fixed;
@@ -72,7 +71,7 @@
     </div>
     <!-- Internet Connection Status -->
     <div class="internet-connection-status" id="internetStatus"></div>
-    <div class="header-area" id="headerArea" style="zoom: 70%">
+    <div class="header-area" id="headerArea" style="zoom: 85%">
         <div class="container">
             <div
                 class="header-content header-style-five position-relative d-flex align-items-center justify-content-between">
@@ -86,7 +85,7 @@
         </div>
     </div>
     <div class="offcanvas offcanvas-start" id="affanOffcanvas" data-bs-scroll="true" tabindex="-1"
-        aria-labelledby="affanOffcanvsLabel" style="zoom: 70%">
+        aria-labelledby="affanOffcanvsLabel" style="zoom: 80%">
         <button class="btn-close btn-close-white text-reset" type="button" data-bs-dismiss="offcanvas"
             aria-label="Close"></button>
         <div class="offcanvas-body p-0">
@@ -107,8 +106,10 @@
                     <li>
                         <a href="#"><i class="bi bi-table"></i>Data Master</a>
                         <ul>
-                            <li><a href="{{ route('barang') }}">Data Barang</a></li>
-                            <li><a href="{{ route('admin') }}">Data Users</a></li>
+                            <li><a href="{{ route('barang') }}">Data Barang</a></li>   
+                            @if ($adminData->role == 'owner')
+                                <li><a href="{{ route('admin') }}">Data Users</a></li>
+                            @endif
                         </ul>
                     </li>
                     <li>
@@ -140,11 +141,11 @@
         </div>
     </div>
 
-    <div class="page-content-wrapper py-3" style="zoom: 70%">
+    <div class="page-content-wrapper py-3" style="zoom: 85%">
         @yield('admin')
     </div>
     <!-- Footer Nav -->
-    <div class="footer-nav-area" id="footerNav" style="zoom: 70%">
+    <div class="footer-nav-area" id="footerNav" style="zoom: 85%">
         <div class="container px-0">
             <div class="footer-nav position-relative">
                 <ul class="h-100 d-flex align-items-center justify-content-between ps-0">

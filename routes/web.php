@@ -9,8 +9,6 @@ use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\LaporanController;
 use App\Http\Controllers\PemasukanController;
 use App\Http\Controllers\PengeluaranController;
-use App\Http\Controllers\PostController;
-use App\Http\Controllers\VisiMisiController;
 
 
 Route::get('/login', [AuthController::class, 'index'])->name('login');
@@ -22,6 +20,7 @@ Route::middleware(['auth', 'admin'])->group(function () {
 
     Route::controller(AuthController::class)->group(function () {
         Route::get('/', 'dashboard')->name('dashboard');
+        Route::get('/dashboard', 'dashboard')->name('dashboard');
         Route::get('/signout', 'signOut')->name('signout');
     });
 
