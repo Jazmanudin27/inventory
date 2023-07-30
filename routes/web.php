@@ -11,6 +11,9 @@ use App\Http\Controllers\PemasukanController;
 use App\Http\Controllers\PengeluaranController;
 
 
+
+Route::get('/', [AuthController::class, 'dashboard'])->name('dashboard');
+Route::get('/dashboard', [AuthController::class, 'dashboard'])->name('dashboard');
 Route::get('/login', [AuthController::class, 'index'])->name('login');
 Route::post('custom-login', [AuthController::class, 'customLogin'])->name('login.custom');
 Route::get('registration', [AuthController::class, 'registration'])->name('register-user');
@@ -19,8 +22,6 @@ Route::post('custom-registration', [AuthController::class, 'customRegistration']
 Route::middleware(['auth', 'admin'])->group(function () {
 
     Route::controller(AuthController::class)->group(function () {
-        Route::get('/', 'dashboard')->name('dashboard');
-        Route::get('/dashboard', 'dashboard')->name('dashboard');
         Route::get('/signout', 'signOut')->name('signout');
     });
 

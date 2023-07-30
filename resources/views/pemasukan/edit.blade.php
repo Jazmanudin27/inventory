@@ -28,17 +28,16 @@
                             <option {{ $pemasukan->jenis_pemasukan == 'Pembelian' ? 'selected' : '' }} value="Pembelian">
                                 Pembelian
                             </option>
-                            <option {{ $pemasukan->jenis_pemasukan == 'Ganti Barang' ? 'selected' : '' }}
-                                value="Ganti Barang">Ganti
-                                Barang</option>
+                            <option {{ $pemasukan->jenis_pemasukan == 'Retur' ? 'selected' : '' }}
+                                value="Retur">Retur</option>
                             <option {{ $pemasukan->jenis_pemasukan == 'Lainnya' ? 'selected' : '' }} value="Lainnya">Lainnya
                             </option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label class="form-label">Diserahkan Oleh</label>
+                        <label class="form-label">Supplier</label>
                         <input class="form-control form-control-sm" value="{{ $pemasukan->diserahkan }}" type="text"
-                            name="diserahkan" placeholder="Diserahkan Oleh">
+                            name="diserahkan" placeholder="Supplier">
                     </div>
                 </div>
                 <h6 style="text-align: center">Data Barang</h6>

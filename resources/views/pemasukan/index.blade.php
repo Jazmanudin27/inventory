@@ -28,8 +28,8 @@
                                 <th>No Bukti</th>
                                 <th>Tanggal</th>
                                 <th>Jenis Pemasukan</th>
-                                <th>Diserahkan</th>
-                                <th>Diterima</th>
+                                <th>Supplier</th>
+                                <th>Di Input</th>
                                 <th>Aksi</th>
                             </tr>
                         </thead>

@@ -28,8 +28,8 @@
                                 <th>No Bukti</th>
                                 <th>Tanggal</th>
                                 <th>Jenis Pengeluaran</th>
-                                <th>Diserahkan</th>
                                 <th>Diterima</th>
+                                <th>Di Input</th>
                                 <th>Aksi</th>
                             </tr>
                         </thead>
@@ -40,8 +40,8 @@
                                     <td>{{ $item->nobukti }}</td>
                                     <td>{{ $item->tanggal }}</td>
                                     <td>{{ $item->jenis_pengeluaran }}</td>
-                                    <td>{{ $item->diserahkan }}</td>
                                     <td>{{ $item->diterima }}</td>
+                                    <td>{{ $item->diserahkan }}</td>
                                     <td>
                                         <a href="{{ route('pengeluaran.delete', $item->nobukti) }}"
                                             class="btn btn-sm btn-danger waves-effect waves-light"><i

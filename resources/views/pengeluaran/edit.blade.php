@@ -29,10 +29,8 @@
                                 value="Penjualan">
                                 Penjualan
                             </option>
-                            <option {{ $pengeluaran->jenis_pengeluaran == 'Ganti Barang' ? 'selected' : '' }}
-                                value="Ganti Barang">
-                                Ganti Barang
-                            </option>
+                            <option {{ $pengeluaran->jenis_pengeluaran == 'Retur' ? 'selected' : '' }}
+                                value="Retur">Retur</option>
                             <option {{ $pengeluaran->jenis_pengeluaran == 'Buang/Rusak' ? 'selected' : '' }}
                                 value="Buang/Rusak">Buang/Rusak</option>
                             <option {{ $pengeluaran->jenis_pengeluaran == 'Lainnya' ? 'selected' : '' }} value="Lainnya">
@@ -41,9 +39,9 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label class="form-label">Diserahkan Oleh</label>
+                        <label class="form-label">Penerima</label>
                         <input class="form-control form-control-sm" value="{{ $pengeluaran->diserahkan }}" type="text"
-                            name="diserahkan" placeholder="Diserahkan Oleh">
+                            name="diterima" placeholder="Penerima">
                     </div>
                 </div>
                 <h6 style="text-align: center">Data Barang</h6>

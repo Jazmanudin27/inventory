@@ -20,14 +20,14 @@
                         <select class="form-select form-select-sm" id="jenis_pemasukan" name="jenis_pemasukan">
                             <option value="">Jenis Pemasukan</option>
                             <option value="Pembelian">Pembelian</option>
-                            <option value="Ganti Barang">Ganti Barang</option>
+                            <option value="Retur">Retur</option>
                             <option value="Lainnya">Lainnya</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label class="form-label">Diserahkan Oleh</label>
+                        <label class="form-label">Supplier</label>
                         <input class="form-control form-control-sm" type="text" name="diserahkan"
-                            placeholder="Diserahkan Oleh">
+                            placeholder="Supplier">
                     </div>
                 </div>
                 <h6 style="text-align: center">Data Barang</h6>

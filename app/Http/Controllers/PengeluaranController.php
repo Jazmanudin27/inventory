@@ -100,8 +100,8 @@ class PengeluaranController extends Controller
         $pengeluaran->nobukti = $kodetampil;
         $pengeluaran->tanggal = $request->tanggal;
         $pengeluaran->jenis_pengeluaran = $request->jenis_pengeluaran;
-        $pengeluaran->diserahkan = $request->diserahkan;
-        $pengeluaran->diterima = $user->name;
+        $pengeluaran->diterima = $request->diterima;
+        $pengeluaran->diserahkan = $user->name;
         $pengeluaran->save();
 
         $detailpengeluaran      = DB::table('detail_pengeluaran_temp')->get();
@@ -151,7 +151,7 @@ class PengeluaranController extends Controller
         $pengeluaran->nobukti = $request->nobukti;
         $pengeluaran->tanggal = $request->tanggal;
         $pengeluaran->jenis_pengeluaran = $request->jenis_pengeluaran;
-        $pengeluaran->diserahkan = $request->diserahkan;
+        $pengeluaran->diterima = $request->diterima;
         $pengeluaran->save();
 
         return redirect()->route('pengeluaran');

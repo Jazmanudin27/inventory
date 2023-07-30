@@ -20,15 +20,15 @@
                         <select class="form-select form-select-sm" id="jenis_pengeluaran" name="jenis_pengeluaran">
                             <option value="">Jenis Pengeluaran</option>
                             <option value="Penjualan">Penjualan</option>
-                            <option value="Ganti Barang">Ganti Barang</option>
+                            <option value="Retur">Retur</option>
                             <option value="Buang/Rusak">Buang/Rusak</option>
                             <option value="Lainnya">Lainnya</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label class="form-label">Diserahkan Oleh</label>
-                        <input class="form-control form-control-sm" type="text" name="diserahkan"
-                            placeholder="Diserahkan Oleh">
+                        <label class="form-label">Penerima</label>
+                        <input class="form-control form-control-sm" type="text" name="diterima"
+                            placeholder="Penerima">
                     </div>
                 </div>
                 <h6 style="text-align: center">Data Barang</h6>
